@@ -31,18 +31,18 @@ If other naming conventions are to be used, then the variable names in the main 
 
 Here are the country code naming conventions used throughout this project. 
 
-- Australia --> AUD
-- New Zealand  --> NZD
-- UK --> GBP
-- Brazil --> BRL
-- Canada --> CND
-- China --> CNY
-- Indonesia --> IDR
-- South Korea --> KRW
-- Mexico --> MXN
-- South Africa --> ZAR
-- Denmark --> DKK
-- Japan --> JPY
-- Norway --> NOK
-- Sweden --> SEK
-- Switzerland --> CHF
+- Australia -- AUD
+- New Zealand  -- NZD
+- UK -- GBP
+- Brazil -- BRL
+- Canada -- CND
+- China -- CNY
+- Indonesia -- IDR
+- South Korea -- KRW
+- Mexico -- MXN
+- South Africa -- ZAR
+- Denmark -- DKK
+- Japan -- JPY
+- Norway -- NOK
+- Sweden -- SEK
+- Switzerland -- CHF
