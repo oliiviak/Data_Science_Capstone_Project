@@ -26,7 +26,7 @@ The data for the Unemployment Rate was downloaded from <a href="https://fred.stl
 
 ----------------------------------------------------------------------------------------------------------------------------
 
-Preliminary data cleaning of the Kaggle dataset followed <a href="https://medium.com/analytics-vidhya/exchange-rate-prediction-part-1-276b6cd5338" target="_blank">this</a> tutorial, and so was not explicitly mentioned, as it can be comprehensively referenced from the linked article.
+Preliminary data cleaning of the Kaggle dataset followed <a href="https://medium.com/analytics-vidhya/exchange-rate-prediction-part-1-276b6cd5338" target="_blank">this</a> tutorial, and so was not explicitly mentioned as it can be comprehensively referenced from the linked article.
 
 ----------------------------------------------------------------------------------------------------------------------------
 
