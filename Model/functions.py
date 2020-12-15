@@ -75,7 +75,7 @@ def matrix_and_scale(df_train, var_list):
 
     #separate scaler for y for when scaling is inversed 
     scaler_y = StandardScaler()
-    scaler_y.fit_transform(df_matrixtrain[:, 3:4])
+    scaler_y.fit_transform(df_matrixtrain[:, 0:1])
 
     return df_matrixtrain, df_matrixtrain_scaled, scaler, scaler_y
 
@@ -87,7 +87,7 @@ def data_for_model(n_future, n_past, df_matrixtrain_scaled):
 
     for i in range(n_past, len(df_matrixtrain_scaled) - n_future + 1):
         X_train.append(df_matrixtrain_scaled[i - n_past:i, 0:df_matrixtrain_scaled.shape[1]])
-        y_train.append(df_matrixtrain_scaled[i + n_future - 1:i + n_future, 3])
+        y_train.append(df_matrixtrain_scaled[i + n_future - 1:i + n_future, 0])
 
     X_train, y_train = np.array(X_train), np.array(y_train)
 

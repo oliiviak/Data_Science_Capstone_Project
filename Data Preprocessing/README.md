@@ -22,7 +22,11 @@ The exports and imports data used for calculating terms of trade was downloaded 
 
 The data for the Unemployment Rate was downloaded from <a href="https://fred.stlouisfed.org/searchresults/?st=Harmonized%20Unemployment%20Rate%3A%20Total%3A%20All%20Persons" target="_blank">FRED</a> using "Harmonized Unemployment Rate: Total: All Persons".
 
-- It should be noted that there is no unemployment data from FRED that is in line with the format for China, Indonesia, South Africa, and Switzerland. As such, for these countries, multivariate analysis is to be conducted without taking the unemployment rate into consideration. 
+- It should be noted that there is no unemployment data from FRED that is in line with the format for China, South Africa, and Switzerland. As such, for these countries, multivariate analysis is to be conducted without taking the unemployment rate into consideration. 
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Preliminary data cleaning of the Kaggle dataset followed <a href="https://medium.com/analytics-vidhya/exchange-rate-prediction-part-1-276b6cd5338" target="_blank">this</a> tutorial, and so was not explicitly mentioned, as it can be comprehensively referenced from the linked article.
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -37,7 +41,6 @@ Here are the country code naming conventions used throughout this project.
 - Brazil -- BRL
 - Canada -- CND
 - China -- CNY
-- Indonesia -- IDR
 - South Korea -- KRW
 - Mexico -- MXN
 - South Africa -- ZAR
