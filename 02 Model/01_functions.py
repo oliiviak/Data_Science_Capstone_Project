@@ -9,7 +9,7 @@ from sklearn.metrics import r2_score
 from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import StandardScaler
 
-# Import from Keras
+# Import from Keras - requires Tensorflow
 from keras.layers import LSTM
 from keras.layers import Dense
 from keras.layers import Dropout
