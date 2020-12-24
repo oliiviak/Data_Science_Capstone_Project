@@ -1,4 +1,4 @@
-The objective of the preprocessing section is to create a dataset that contains all the data we will need for the multivariate model. Values for each independent variable, for each country will be appended to the main dataset. For each independent variable, there is a notebook outlining the preprocessing steps to create a dataframe that only contains values for that particular variable. Once that dataframe has been constructed, it will be appended to the main dataset. The order in which the variables are appended does not matter, however, for further iteration steps, it is important to remember to append to the new main dataset as opposed to the original main dataset (that only contains exchange rate data). For example, the order in which the notebooks were written is interest rate, GDP growth rate, terms of trade, unemployment. Thus, our final dataset will be completed once the unemployment data has been appended. When saving the new main dataset, it depends on individual preference whether to save to and overwrite the same dataset every time, or create a new dataset for each iteration. The notebooks have been written and formatted according to the latter option. 
+The objective of the preprocessing section is to create a dataset that contains all the data needed for the multivariate model. Values for each independent variable per country will be appended to the main dataset. For each independent variable, there is a notebook outlining the preprocessing steps to create a dataframe that only contains values for that particular variable. Once that dataframe has been constructed, it will be appended to the main dataset. The order in which the variables are appended does not matter, however, for further iteration steps, it is important to append to the new main dataset as opposed to the original main dataset (that only contains exchange rate data). For example, the order in which the notebooks were written is interest rate, GDP growth rate, terms of trade, unemployment. Thus, our final dataset will be completed once the unemployment data has been appended. When saving the new main dataset, it depends on individual preference whether to save to and overwrite the same dataset every time, or create a new dataset for each iteration. The notebooks have been written and formatted according to the latter option. 
 
 The independent variables included are the following - interest rate, GDP growth rate, terms of trade, and unemployment.
 
@@ -22,7 +22,7 @@ The exports and imports data used for calculating terms of trade was downloaded 
 
 The data for the Unemployment Rate was downloaded from <a href="https://fred.stlouisfed.org/searchresults/?st=Harmonized%20Unemployment%20Rate%3A%20Total%3A%20All%20Persons" target="_blank">FRED</a> using "Harmonized Unemployment Rate: Total: All Persons".
 
-- It should be noted that there is no unemployment data from FRED that is in line with the format for China, South Africa, and Switzerland. As such, for these countries, multivariate analysis is to be conducted without taking the unemployment rate into consideration. 
+- It should be noted that there is no unemployment data from FRED that is in line with the format for China, South Africa, and Switzerland. As such, for these countries, multivariate analysis is conducted without taking unemployment rate into consideration. 
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -36,16 +36,20 @@ If other naming conventions are to be used, then the variable names in the main 
 Here are the country code naming conventions used throughout this project. 
 
 - Australia -- AUD
-- New Zealand  -- NZD
-- UK -- GBP
 - Brazil -- BRL
+- Switzerland -- CHF
 - Canada -- CND
 - China -- CNY
+- Denmark -- DKK
+- UK -- GBP
+- Japan -- JPY
 - South Korea -- KRW
 - Mexico -- MXN
-- South Africa -- ZAR
-- Denmark -- DKK
-- Japan -- JPY
 - Norway -- NOK
+- New Zealand  -- NZD
 - Sweden -- SEK
-- Switzerland -- CHF
+- South Africa -- ZAR
+
+
+
+
