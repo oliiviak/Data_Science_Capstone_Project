@@ -13,8 +13,8 @@ st.set_page_config(page_title='FEX Forecasting',
                 layout="wide")
 
 root_path = '/Users/zumiis/final_4git'
-df = functions.import_main_df(f'{root_path}/02 Model/final_dataset.csv')
-path2020 = f'{root_path}/02 Model/all_countries2020.csv'
+df = functions.import_main_df(f'{root_path}/02_Model/final_dataset.csv')
+path2020 = f'{root_path}/02_Model/all_countries2020.csv'
 
 first_column = ['Canada', 'Australia', 'Brazil', 'China', 'Denmark', 'Japan', 'Korea', 'Mexico', 'New Zealand', 
                 'Norway', 'Sweden', 'Switzerland', 'South Africa', 'UK', 'US']
@@ -59,15 +59,15 @@ if pageop == 'Best Model':
     if option == 'South Africa':
         country_code = 'ZAR'
 
-    fitted_future_predictions = functions.import_main_df(f'{root_path}/03 Deployment/data_files/fitted_future_predictions_{country_code}.csv')
+    fitted_future_predictions = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_future_predictions_{country_code}.csv')
     fitted_future_predictions['index'] = pd.to_datetime(fitted_future_predictions['index'])
     fitted_future_predictions = fitted_future_predictions.set_index('index')
 
-    fitted_training_predictions = functions.import_main_df(f'{root_path}/03 Deployment/data_files/fitted_training_predictions_{country_code}.csv')
+    fitted_training_predictions = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_training_predictions_{country_code}.csv')
     fitted_training_predictions['index'] = pd.to_datetime(fitted_training_predictions['index'])
     fitted_training_predictions = fitted_training_predictions.set_index('index')
 
-    fitted_dataset_train = functions.import_main_df(f'{root_path}/03 Deployment/data_files/fitted_dataset_train_{country_code}.csv')
+    fitted_dataset_train = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_dataset_train_{country_code}.csv')
     fitted_dataset_train['index'] = pd.to_datetime(fitted_dataset_train['index'])
     fitted_dataset_train = fitted_dataset_train.set_index('index')
 
@@ -85,7 +85,6 @@ if pageop == 'Best Model':
     start_time2 = st.slider("Select Start Date", min_value=datetime(2000, 1, 3), max_value=datetime(2020, 11, 30),
                         value=datetime(2001, 6, 14), format="MM/DD/YY", key=f'only_{country_code}')
     with st.beta_container():
-        # You can call any Streamlit command, including custom components:
         st.bokeh_chart(functions.bokeh_plotting(fitted_future_predictions, country_code, fitted_training_predictions, 
                         fitted_dataset_train, df2020, start_time2), use_container_width=False)
         
@@ -98,8 +97,8 @@ if pageop == 'Best Model':
 
 if pageop == 'Beta':
 
-    fitted_modelCND = load_model(f'{root_path}/03 Deployment/data_files/trained_model_on_CND.h5', compile=True)
-    fitted_modelUSD = load_model(f'{root_path}/03 Deployment/data_files/trained_model_on_USD.h5', compile=True)
+    fitted_modelCND = load_model(f'{root_path}/03_Deployment/data_files/trained_model_on_CND.h5', compile=True)
+    fitted_modelUSD = load_model(f'{root_path}/03_Deployment/data_files/trained_model_on_USD.h5', compile=True)
 
     st.text('Choose a Base Model')
 
@@ -111,15 +110,15 @@ if pageop == 'Beta':
         fitted_model = fitted_modelCND
         country_code = 'CND'
         
-        fitted_future_predictions = functions.import_main_df(f'{root_path}/03 Deployment/data_files/fitted_future_predictions_{country_code}.csv')
+        fitted_future_predictions = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_future_predictions_{country_code}.csv')
         fitted_future_predictions['index'] = pd.to_datetime(fitted_future_predictions['index'])
         fitted_future_predictions = fitted_future_predictions.set_index('index')
 
-        fitted_training_predictions = functions.import_main_df(f'{root_path}/03 Deployment/data_files/fitted_training_predictions_{country_code}.csv')
+        fitted_training_predictions = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_training_predictions_{country_code}.csv')
         fitted_training_predictions['index'] = pd.to_datetime(fitted_training_predictions['index'])
         fitted_training_predictions = fitted_training_predictions.set_index('index')
 
-        fitted_dataset_train = functions.import_main_df(f'{root_path}/03 Deployment/data_files/fitted_dataset_train_{country_code}.csv')
+        fitted_dataset_train = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_dataset_train_{country_code}.csv')
         fitted_dataset_train['index'] = pd.to_datetime(fitted_dataset_train['index'])
         fitted_dataset_train = fitted_dataset_train.set_index('index')
 
@@ -137,7 +136,6 @@ if pageop == 'Beta':
         start_time2 = st.slider("Select Start Date", min_value=datetime(2000, 1, 3), max_value=datetime(2020, 11, 30),
                             value=datetime(2001, 6, 14), format="MM/DD/YY", key=f'only_{country_code}')
         with st.beta_container():
-            # You can call any Streamlit command, including custom components:
             st.bokeh_chart(functions.bokeh_plotting(fitted_future_predictions, country_code, fitted_training_predictions, 
                             fitted_dataset_train, df2020, start_time2), use_container_width=False)
         
@@ -147,15 +145,15 @@ if pageop == 'Beta':
         fitted_model = fitted_modelUSD
         country_code = 'USD'
 
-        fitted_future_predictions = functions.import_main_df(f'{root_path}/03 Deployment/data_files/fitted_future_predictions_{country_code}.csv')
+        fitted_future_predictions = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_future_predictions_{country_code}.csv')
         fitted_future_predictions['index'] = pd.to_datetime(fitted_future_predictions['index'])
         fitted_future_predictions = fitted_future_predictions.set_index('index')
 
-        fitted_training_predictions = functions.import_main_df(f'{root_path}/03 Deployment/data_files/fitted_training_predictions_{country_code}.csv')
+        fitted_training_predictions = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_training_predictions_{country_code}.csv')
         fitted_training_predictions['index'] = pd.to_datetime(fitted_training_predictions['index'])
         fitted_training_predictions = fitted_training_predictions.set_index('index')
 
-        fitted_dataset_train = functions.import_main_df(f'{root_path}/03 Deployment/data_files/fitted_dataset_train_{country_code}.csv')
+        fitted_dataset_train = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_dataset_train_{country_code}.csv')
         fitted_dataset_train['index'] = pd.to_datetime(fitted_dataset_train['index'])
         fitted_dataset_train = fitted_dataset_train.set_index('index')
 
@@ -173,7 +171,6 @@ if pageop == 'Beta':
         start_time2 = st.slider("Select Start Date", min_value=datetime(2000, 1, 3), max_value=datetime(2020, 11, 30),
                             value=datetime(2001, 6, 14), format="MM/DD/YY", key=f'only_{country_code}')
         with st.beta_container():
-            # You can call any Streamlit command, including custom components:
             st.bokeh_chart(functions.bokeh_plotting(fitted_future_predictions, country_code, fitted_training_predictions, 
                             fitted_dataset_train, df2020, start_time2), use_container_width=False)
         
