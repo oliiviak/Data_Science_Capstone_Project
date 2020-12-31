@@ -1,4 +1,5 @@
-This section contains the functions file and the notebook that outlines the basic linear strucutre of the multivariate LSTM model. The final dataset is also included. <br />
+This section contains the functions file and the notebook that outlines the basic linear strucutre of the multivariate LSTM model. The final dataset has also included. 
+
 (Note: the final dataset presented here is different from the one created in '04_load_data_unemployment' in that it includes two dummy variables (for the financial crisis and H1N1 years) and the price of gold in USD.)
 
 ----------------------------------------------------------------------------------------------------------------------------
