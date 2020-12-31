@@ -12,9 +12,9 @@ from sklearn.metrics import r2_score
 st.set_page_config(page_title='FEX Forecasting',
                 layout="wide")
 
-root_path = '/Users/zumiis/final_4git'
-df = functions.import_main_df(f'{root_path}/02_Model/final_dataset.csv')
-path2020 = f'{root_path}/02_Model/all_countries2020.csv'
+path = '~'
+df = functions.import_main_df(f'{path}/02_Model/final_dataset.csv')
+path2020 = f'{path}/02_Model/all_countries2020.csv'
 
 first_column = ['Canada', 'Australia', 'Brazil', 'China', 'Denmark', 'Japan', 'Korea', 'Mexico', 'New Zealand', 
                 'Norway', 'Sweden', 'Switzerland', 'South Africa', 'UK', 'US']
