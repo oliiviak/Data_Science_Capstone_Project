@@ -59,15 +59,15 @@ if pageop == 'Best Model':
     if option == 'South Africa':
         country_code = 'ZAR'
 
-    fitted_future_predictions = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_future_predictions_{country_code}.csv')
+    fitted_future_predictions = functions.import_main_df(f'data_files/fitted_future_predictions_{country_code}.csv')
     fitted_future_predictions['index'] = pd.to_datetime(fitted_future_predictions['index'])
     fitted_future_predictions = fitted_future_predictions.set_index('index')
 
-    fitted_training_predictions = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_training_predictions_{country_code}.csv')
+    fitted_training_predictions = functions.import_main_df(f'data_files/fitted_training_predictions_{country_code}.csv')
     fitted_training_predictions['index'] = pd.to_datetime(fitted_training_predictions['index'])
     fitted_training_predictions = fitted_training_predictions.set_index('index')
 
-    fitted_dataset_train = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_dataset_train_{country_code}.csv')
+    fitted_dataset_train = functions.import_main_df(f'data_files/fitted_dataset_train_{country_code}.csv')
     fitted_dataset_train['index'] = pd.to_datetime(fitted_dataset_train['index'])
     fitted_dataset_train = fitted_dataset_train.set_index('index')
 
@@ -97,8 +97,8 @@ if pageop == 'Best Model':
 
 if pageop == 'Beta':
 
-    fitted_modelCND = load_model(f'{root_path}/03_Deployment/data_files/trained_model_on_CND.h5', compile=True)
-    fitted_modelUSD = load_model(f'{root_path}/03_Deployment/data_files/trained_model_on_USD.h5', compile=True)
+    fitted_modelCND = load_model('data_files/trained_model_on_CND.h5', compile=True)
+    fitted_modelUSD = load_model('data_files/trained_model_on_USD.h5', compile=True)
 
     st.text('Choose a Base Model')
 
@@ -110,15 +110,15 @@ if pageop == 'Beta':
         fitted_model = fitted_modelCND
         country_code = 'CND'
         
-        fitted_future_predictions = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_future_predictions_{country_code}.csv')
+        fitted_future_predictions = functions.import_main_df(f'data_files/fitted_future_predictions_{country_code}.csv')
         fitted_future_predictions['index'] = pd.to_datetime(fitted_future_predictions['index'])
         fitted_future_predictions = fitted_future_predictions.set_index('index')
 
-        fitted_training_predictions = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_training_predictions_{country_code}.csv')
+        fitted_training_predictions = functions.import_main_df(f'data_files/fitted_training_predictions_{country_code}.csv')
         fitted_training_predictions['index'] = pd.to_datetime(fitted_training_predictions['index'])
         fitted_training_predictions = fitted_training_predictions.set_index('index')
 
-        fitted_dataset_train = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_dataset_train_{country_code}.csv')
+        fitted_dataset_train = functions.import_main_df(f'data_files/fitted_dataset_train_{country_code}.csv')
         fitted_dataset_train['index'] = pd.to_datetime(fitted_dataset_train['index'])
         fitted_dataset_train = fitted_dataset_train.set_index('index')
 
@@ -145,15 +145,15 @@ if pageop == 'Beta':
         fitted_model = fitted_modelUSD
         country_code = 'USD'
 
-        fitted_future_predictions = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_future_predictions_{country_code}.csv')
+        fitted_future_predictions = functions.import_main_df(f'data_files/fitted_future_predictions_{country_code}.csv')
         fitted_future_predictions['index'] = pd.to_datetime(fitted_future_predictions['index'])
         fitted_future_predictions = fitted_future_predictions.set_index('index')
 
-        fitted_training_predictions = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_training_predictions_{country_code}.csv')
+        fitted_training_predictions = functions.import_main_df(f'data_files/fitted_training_predictions_{country_code}.csv')
         fitted_training_predictions['index'] = pd.to_datetime(fitted_training_predictions['index'])
         fitted_training_predictions = fitted_training_predictions.set_index('index')
 
-        fitted_dataset_train = functions.import_main_df(f'{root_path}/03_Deployment/data_files/fitted_dataset_train_{country_code}.csv')
+        fitted_dataset_train = functions.import_main_df(f'data_files/fitted_dataset_train_{country_code}.csv')
         fitted_dataset_train['index'] = pd.to_datetime(fitted_dataset_train['index'])
         fitted_dataset_train = fitted_dataset_train.set_index('index')
 

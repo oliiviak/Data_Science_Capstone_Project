@@ -4,7 +4,7 @@ The independent variables included are the following - interest rate, GDP growth
 
 ----------------------------------------------------------------------------------------------------------------------------
 
-Throughout the project files, 'main dataset' will always be referring to <a href="https://www.kaggle.com/brunotly/foreign-exchange-rates-per-dollar-20002019?select=Foreign_Exchange_Rates.csv" target="_blank">this</a> dataset from Kaggle. 
+Throughout the project files, 'main dataset' will be referring to <a href="https://www.kaggle.com/brunotly/foreign-exchange-rates-per-dollar-20002019?select=Foreign_Exchange_Rates.csv" target="_blank">this</a> dataset from Kaggle. 
 
 
 The data for interest rates was downloaded from <a href="https://fred.stlouisfed.org/searchresults/?st=Immediate%20Rates%3A%20Less%20than%2024%20Hours%3A%20Call%20Money%2FInterbank%20Rate" target="_blank">FRED</a> using "Immediate Rates: Less than 24 Hours: Call Money/Interbank Rate".
